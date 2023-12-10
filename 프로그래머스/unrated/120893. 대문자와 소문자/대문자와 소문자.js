@@ -1,14 +1,14 @@
 function solution(my_string) {
-    let answer = [];
-    let array = my_string.split("");
+    // 대문자 <-> 소문자 변환한 문자열
+    var answer = '';
     
-    for(let i=0; i<array.length; i++){
-        // 대문자일 경우
-        if(array[i] === array[i].toUpperCase()){
-            answer.push(array[i].toLowerCase());
-        }else{
-            answer.push(array[i].toUpperCase());
+    for(let i=0; i<my_string.length; i++){
+        // 대문자이면
+        if(my_string[i] === my_string[i].toUpperCase()){
+            answer += my_string[i].toLowerCase();
+        }else if(my_string[i] === my_string[i].toLowerCase()){
+            answer +=  my_string[i].toUpperCase();
         }
     }
-    return answer.join("");
+    return answer;
 }
