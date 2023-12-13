@@ -8,8 +8,8 @@ function solution(array) {
         }
         else{
             let newArray = String(array[i]).split("");  
-            for(let i=0; i<newArray.length; i++){
-                if(newArray[i] === '7'){
+            for(let j=0; j<newArray.length; j++){
+                if(newArray[j] === '7'){
                     count ++;
                 }
             }
